@@ -488,6 +488,13 @@
       letter-spacing: -0.02em;
     }
 
+    @media (max-width: 480px) {
+      .pricing-card-price-range {
+        white-space: nowrap;
+        font-size: 1.25rem;
+      }
+    }
+
     .pricing-how {
       max-width: 840px;
       width: 100%;
@@ -811,6 +818,57 @@
 
     @media (max-width: 480px) {
       .hero-subtitle { white-space: normal; }
+    }
+
+    /* Mobile: disable all hover/active effects - only functionality works */
+    @media (max-width: 768px) {
+      /* Disable nav scroll and decorative elements - only Call and Request Quote work */
+      .wordmark-nav,
+      [data-scroll-to],
+      .value-item,
+      .pricing-card,
+      .pricing-how,
+      .pricing-notes,
+      .service-item,
+      .step {
+        pointer-events: none;
+      }
+      /* Remove tap highlight on all elements */
+      * {
+        -webkit-tap-highlight-color: transparent !important;
+      }
+      .btn:hover, .btn:active,
+      .btn-solid:hover, .btn-solid:active,
+      .wordmark-nav:hover,
+      .top-bar-nav a:hover,
+      .top-bar .btn:hover,
+      .hero-buttons .btn:hover, .hero-buttons .btn:active,
+      .value-item:hover, .value-item:active,
+      .value-item:hover .value-icon,
+      .pricing-card:hover,
+      .pricing-how:hover,
+      .pricing-notes:hover,
+      .service-item:hover,
+      .service-item:hover .service-icon,
+      .step:hover,
+      .footer-brand:hover,
+      .footer a:hover,
+      .sticky-bar .btn:hover,
+      .quote-wizard-close:hover,
+      .quote-wizard-option:hover,
+      .quote-wizard-file-btn:hover {
+        transform: none !important;
+        box-shadow: none !important;
+      }
+      .btn:hover { background: transparent !important; color: #000 !important; }
+      .btn-solid:hover { background: #000 !important; color: #fff !important; }
+      .wordmark-nav:hover,
+      .top-bar-nav a:hover,
+      .footer-brand:hover,
+      .footer a:hover { opacity: 1 !important; }
+      .quote-wizard-option:hover { background: transparent !important; color: #000 !important; }
+      .quote-wizard-option.selected:hover { background: #000 !important; color: #fff !important; }
+      .quote-wizard-close:hover { background: transparent !important; color: #000 !important; }
     }
 
     /* ============================================
@@ -1515,7 +1573,7 @@
         </div>
         <div class="pricing-card animate-in" data-delay="400">
           <div class="pricing-card-label">Full Load</div>
-          <div class="pricing-card-price">$849–$949</div>
+          <div class="pricing-card-price pricing-card-price-range">$849–$949</div>
         </div>
       </div>
       <div class="pricing-how animate-in" data-delay="300">
