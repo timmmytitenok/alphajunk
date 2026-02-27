@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "ALPHA JUNK | Junk Removal Done Right",
   description: "Junk Removal — Fast, Clean, Simple. Serving Columbus, Ohio.",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
